@@ -272,8 +272,8 @@ function ProductList({ onHomeClick }) {
                 : 0
     };
 
+    // check if the product is already in the cart 
     const alreadyInCart = (product) => {
-        console.log(product)
         return  !!cartItems.find(item => item.name === product.name)
     }    
     
