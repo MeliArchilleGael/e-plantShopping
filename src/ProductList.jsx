@@ -271,6 +271,11 @@ function ProductList({ onHomeClick }) {
                     cartItems.reduce((total, item) => total + item.quantity, 0) 
                 : 0
     };
+
+    const alreadyInCart = (product) => {
+        console.log(product)
+        return  !!cartItems.find(item => item.name === product.name)
+    }    
     
     return (
         <div>
@@ -325,7 +330,8 @@ function ProductList({ onHomeClick }) {
                                                 {plant.name}
                                             </div>
                                                 
-                                            <button onClick={()=>handleClickAddToCart(plant)} className="product-button">
+                                            <button onClick={()=>handleClickAddToCart(plant)} 
+                                            className={` product-button ${alreadyInCart(plant) ? 'product-button-no-actif' : 'product-button-actif'}`}>
                                                 Add to cart
                                             </button>
                                         </div>

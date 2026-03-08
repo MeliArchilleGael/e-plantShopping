@@ -197,7 +197,6 @@ body {
 /* ProductList.css */
 
 .product-button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -209,6 +208,16 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+
+.product-button-actif {
+    background-color: #4CAF50; /* Green */
+}
+
+.product-button-no-actif {
+    background-color: #666; /* Green */
+}
+
+
   
   .product-button:hover {
     background-color: #45a049;
